@@ -1,0 +1,25 @@
+head section
+
+Integer getNumeroTipos()
+Integer getKilosTipo(Integer j)
+Integer getNumeroVariedades()
+Integer getBeneficiosVariedad(Integer i)
+Double getKilosTipoVariedad(Integer i, Integer j)
+
+Integer n = getNumeroTipos()
+Integer m = getNumeroVariedades()
+
+
+goal section
+
+max sum(getBeneficiosVariedad(i) x[i], i in 0 .. m)
+
+
+constraints section
+
+sum(getKilosTipoVariedad(j,i) x[i], i in 0 .. m) <= getKilosTipo(j), j in 0 .. n
+
+
+int
+
+x[i], i in 0 .. m
